@@ -9,7 +9,7 @@ Set the flash to send a messenger with the message variable for layout
 Solution for sending flash messages for the layout and need not be editing posts in all views.
 
 Installation
-================
+-----
 Download this module into the vendor folder of your project.
 
 Enable the module in the file application.config.php. Add the module JVFlashMessenger.
@@ -22,7 +22,7 @@ Add the following code inside the action you want to show messages
 $this->getServiceLocator()->get('jv_flashmessenger');
 ```
 
-Add the following code in layout
+Add the following code in layout.
 Note: This code was developed thinking you are using the bootstrap.
 
 ```php
@@ -35,4 +35,24 @@ Note: This code was developed thinking you are using the bootstrap.
         <?php echo $message?>
     </div>
 <?php endif; ?>
+```
+
+Set the flash messenger in controller / action
+
+Messages success
+-----
+```php
+$this->flashMessenger()->addMessage(array('success' => 'Message Text!'));
+```
+
+Messages info
+-----
+```php
+$this->flashMessenger()->addMessage(array('info' => 'Message Text!'));
+```
+
+Messages error
+-----
+```php
+$this->flashMessenger()->addMessage(array('error' => 'Message Text!'));
 ```
