@@ -1,3 +1,5 @@
+<?php 
+
 namespace JVFlashMessenger;
 
 class Module
