@@ -22,7 +22,7 @@ class Module
 	    		
 	    			return $viewModel;
 	    		},
-			)
+			),
 		);
 	}
 }
