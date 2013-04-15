@@ -5,8 +5,8 @@ namespace JVFlashMessenger;
 class Module
 {
     public function getServiceConfig() {
-		return array(
-			'factories' => array(
+        return array(
+	        'factories' => array(
 				'jv_flashmessenger' => function ($sm) {
 	    			$viewModel = $sm->get('view_manager');
 	    			$controller = $sm->get('ControllerPluginManager');
