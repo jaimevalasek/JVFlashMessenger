@@ -14,7 +14,7 @@ class Module
 					$flashMessenger = $controller->get('FlashMessenger');
 					
 					return $viewModel->setVariable('messages', $flashMessenger->getMessages());
-	    		},
+				},
 			)
 		);
 	}
