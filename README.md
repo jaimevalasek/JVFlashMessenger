@@ -56,3 +56,9 @@ Messages error
 ```php
 $this->flashMessenger()->addMessage(array('error' => 'Message Text!'));
 ```
+
+Tutorials
+-----
+http://www.youtube.com/zf2tutoriais
+
+http://www.zf2.com.br/tutoriais
