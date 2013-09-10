@@ -4,18 +4,19 @@ namespace JVFlashMessenger;
 
 class Module
 {
-	public function getServiceConfig() {
-		return array(
-			'factories' => array(
-				'jv_flashmessenger' => function ($sm) {
-					// Setando variáveis
-					$viewModel = $sm->get('view_manager')->getViewModel();
-					$controller = $sm->get('ControllerPluginManager');
-					$flashMessenger = $controller->get('FlashMessenger');
-					
-					return $viewModel->setVariable('messages', $flashMessenger->getMessages());
-				},
-			)
-		);
+	public function getConfig()
+	{
+	    return include __DIR__ . '/config/module.config.php';
+	}
+	
+	public function getAutoloaderConfig()
+	{
+	    return array(
+	        'Zend\Loader\StandardAutoloader' => array(
+	            'namespaces' => array(
+	                __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
+	            ),
+	        ),
+	    );
 	}
 }
